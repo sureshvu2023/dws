@@ -30,5 +30,20 @@ Successful money transfer between accounts.
 Transfer with invalid account IDs.
 Transfer with insufficient funds.
 Concurrent transfers from multiple threads ensuring correct balance.
-To run the tests, use the following command:
+**To run the tests, use the following command:**
+./gradlew test
+
+**Concurrency Handling**
+The application uses synchronized methods in the AccountService to ensure thread safety. When multiple threads attempt to transfer money concurrently, the balance updates are handled correctly, and the application maintains consistency.
+
+**Dependencies**
+The application uses the following major dependencies:
+
+**Spring Boot:** Provides the framework for building the application.
+**Lombok: **Reduces boilerplate code with annotations.
+**Springfox**: Generates OpenAPI documentation and Swagger UI.
+
+**Future Improvements**
+In the future, the application could be extended to include features like transaction logging, user authentication, database and additional error handling.
+
 
